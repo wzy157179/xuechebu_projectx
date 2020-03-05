@@ -1,6 +1,7 @@
 """
 PO文件基类
 """
+from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 
 
@@ -30,3 +31,9 @@ class BasePage(object):
         element = self.find_element_func(location)  # 定位目标元素
         element.clear()  # 调用清空方法
         element.send_keys(text)  # 调用输入方法
+
+    def get_toast_msg(self, msg):
+        """获取toast信息方法"""
+        xpath = By.XPATH, './/*[contains(@text,"{}")]'.format(msg)
+        element = self.find_element_func(xpath, timeout=5, poll=0.3)
+        return element.text

@@ -15,7 +15,9 @@ def get_driver():
         "appActivity": ".MainActivity",  # 待测应用的启动名
         # 输入中文设置
         "resetKeyboard": True,
-        "unicodeKeyboard": True
+        "unicodeKeyboard": True,
+        # 获取toast信息
+        "automationName": "Uiautomator2"
     }
     driver = webdriver.Remote('http://127.0.0.1:4723/wd/hub', desired_capabilities=capabilities)
     return driver
