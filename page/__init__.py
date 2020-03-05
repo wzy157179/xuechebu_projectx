@@ -17,3 +17,5 @@ phone = By.ID, 'com.bjcsxq.chat.carfriend:id/login_phone_et'  # 账号
 pwd = By.ID, 'com.bjcsxq.chat.carfriend:id/login_pwd_et'  # 密码
 login_btn = By.ID, 'com.bjcsxq.chat.carfriend:id/login_btn'  # 登录按钮
 comfirm_btn_ = By.ID, 'com.bjcsxq.chat.carfriend:id/btn_neg'  # 确定按钮
+
+# s
